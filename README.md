@@ -1,21 +1,21 @@
-# EDS 240 HW 4 Repository {style="color: black"}
+# EDS 240 HW 4 Repository
 
-## Purpose {style="color: black"}
+## Purpose
 
 This repository centralizes all resources (scripts, data, references) used to create the EDS 240 HW 4 assignment and all project outputs (figures, websites, blogs).
 
-## Contents {style="color: black"}
+## Contents
 
 This repository is currently being developed. Information on the contents of the repository will be updated in the next few weeks.
 
-## Data Access {style="color: black"}
+## Data Access
 
-This repository is currently being developed. Data access information will be updated in the next few weeks.
+All data used in this assignment are available and accessible in .csv or .xlsx formats and filed in the 'data' subfolder.
 
-## Authors {style="color: black"}
+## Authors
 
 Lilia Mourier
 
-## Acknowledgements {style="color: black"}
+## Acknowledgements
 
-TBD
+Data used in this assignment are sources from the CA Office of Environmental Health Hazard Assessment CalEnviroScreen project and the CA Coastal Commission Open Data repository.
