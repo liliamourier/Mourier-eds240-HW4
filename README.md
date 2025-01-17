@@ -18,4 +18,4 @@ Lilia Mourier
 
 ## Acknowledgements
 
-Data used in this assignment are sources from the CA Office of Environmental Health Hazard Assessment CalEnviroScreen project and the CA Coastal Commission Open Data repository.
+Data used in this assignment are sourced from the CA Office of Environmental Health Hazard Assessment CalEnviroScreen project and the CA Coastal Commission Open Data repository.
