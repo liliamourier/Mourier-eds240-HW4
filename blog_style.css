@@ -1,0 +1,36 @@
+/* Set background color */
+body {
+    background-color: #1E1D18; /* Charcoal black */
+    color: #DCDCDC; /* White text */
+    font-family: "Source Sans 3", sans-serif; /* Main body font */
+    font-size: 16px;
+}
+
+/* Title styles */
+h1 {
+    font-family: "Merriweather", serif;
+    font-size: 32px;
+    color: #7892A6; /* Medium icey blue */
+}
+
+/* Header styles */
+h2, h3, h4 {
+    font-family: "Merriweather", serif;
+    color: #7892A6; /* Medium icey blue */
+}
+
+/* Code block styling */
+pre {
+    background-color: #1E1D18; /* Medium icey blue */
+    font-family: "Courier New", monospace;
+}
+
+/* Change the color of the 'Show code' and 'Hide code' text */
+details summary {
+  color: #DCDCDC !important; /* Change to white */
+}
+
+/* Optional: Change background or hover effects for better visibility */
+details[open] summary {
+  color:#DCDCDC !important;  /* Ensure it's white when open too */
+}

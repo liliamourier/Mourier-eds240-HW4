@@ -1,0 +1,545 @@
+---
+title: "Designing an Infographic on Shoreline Armoring and Coastal Resilience"
+author: "Lilia Mourier"
+date: "March 13, 2025"
+format:
+  html:
+    embed-resources: true
+header-includes:
+  - |
+    <style>
+      body {
+        max-width: 100%;
+        margin: 0 auto;  
+      }
+      .container {
+        max-width: 100%;
+        margin: 0 auto;  
+      }
+    </style>
+editor: visual
+---
+
+<link rel="stylesheet" href="blog_style.css">
+
+------------------------------------------------------------------------
+
+```{r}
+#| message: false
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"
+#| fig-alt: "A black and white image of a lighthouse and rocky shoreline at Pigeon Point Lighthouse Historic State Park, California."
+
+library(here)
+knitr::include_graphics(here("blog_images", "lighthouse.jpg"))
+
+```
+
+### First, a personal note.
+
+Growing up on the Bay Area peninsula, the beach was always a short (and windy) drive away — over the Santa Cruz Mountains, through the redwoods, to where the air turned sticky with salt, and the horizon of the Pacific came into view. My family spent countless weekends along the coast, sometimes bathed in sunshine but more often swallowed by fog. Some days, we wandered wide, dune-backed beaches; other times, we scrambled down bluffs to unnamed rocky shores. One beach in particular became our favorite. Unnamed and nestled between two state parks, it had a rock formation stretching out like the spine of an ancient sea dragon. We visited so often that, to us, it simply became Dragon Rock Beach.
+
+For years, I saw Dragon Rock Beach as unchanging, immune to time. It wasn’t until much later, through my studies of coastal processes, that I realized how mistaken that view was. Shorelines are constantly shifting, shaped by waves, storms, and rising seas. What once seemed permanent is, in reality, dynamic and vulnerable — particularly due to human interventions like shoreline armoring.
+
+### Why shoreline armoring?
+
+To adapt to rising seas, many coastal jurisdictions turn to a mix of hard protective structures like seawalls and revetments, alongside softer approaches like sand replenishment and living shorelines (Lester et al., 2023). While these measures protect property and tax revenue, they come with significant ecological and social trade-offs (CCC, 2018; Lester et al., 2023; Schooler, 2017). Hard structures, in particular, prevent natural shoreline retreat, leading to habitat loss, reduced recreational space, and increased erosion (IPCC, 2019). Given these impacts, understanding the scale and distribution of shoreline armoring is critical to improving resilience. This led me to ask:
+
+-   How much of California’s coastline is armored, and how has this changed over time?
+
+-   Where are these structures most concentrated?
+
+-   What types of structures are most common?
+
+-   Who owns and manages these structures?
+
+-   What types of shoreline environments are these structures placed in?
+
+To answer these questions, I used the California Coastal Commission Armor Structure Locations dataset, which provides detailed information on the location, length, design, ownership, and shoreline environment of each documented structure. I supplemented this with time-series data from Griggs and Patsch (2019).
+
+Using these data, I created an infographic to break down how hard armoring is shaping the California coast, with the ultimate goal of encouraging informed conversations about shoreline adaptation strategies that balance protection with long-term coastal sustainability.
+
+```{r}
+#| message: false
+#| eval: true
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%"  
+#| out-height: "auto"
+#| fig-alt: "Infographic showing the impact of shoreline armoring on California's coastal resilience. It includes data visualizations on the distribution, types, ownership, and environmental context of armored structures along the coast, highlighting trends over time and their ecological and social implications. "
+
+library(here)
+knitr::include_graphics(here("blog_images", "EDS240_Infographic.svg"))
+```
+
+### My design thinking.
+
+#### Graphic form
+
+Since I had a lot of information to share, I wanted to keep the visualizations clear and engaging rather than overwhelming or dull. So, I chose graphic forms that make it easy to understand at a glance, following Cleveland & McGill’s Hierarchy of Elementary Perceptual Tasks:
+
+-   **Line plots** to show changes in armored shoreline over time, emphasizing trends and rates of change.
+
+-   **Choropleth maps** to display the distribution of structures by county, making regional patterns easy to interpret.
+
+-   **Bar charts** to compare different types of structures, allowing for clear, exact comparisons of many groups.
+
+-   **Waffle charts** to illustrate ownership (public vs. private) and placement across shoreline environments, effectively conveying parts-to-whole relationships between a few groups.
+
+#### Text & typography
+
+I included a lot of text in my infographic, so I decided to use two font families to distinguish different types of information:
+
+-   **Merriweather** for key takeaways and titles, emphasizing the most important points.
+
+-   **Source Sans** for annotations and axis labels, ensuring readability without visual clutter.
+
+I highlighted the most critical insights in large text for the skimmers, while using smaller text to provide deeper details for those who want to engage more fully with the content.
+
+#### Themes & layout
+
+With a large amount of information to present, I designed a minimal theme to maximize white space and keep visualizations clean and digestible. I removed axis and grid lines where possible, instead using labels and annotations to convey values. I also made the plot backgrounds match the infographic background for consistency and reduced visual clutter.
+
+To guide the reader’s journey, I structured the infographic **top to bottom**, beginning with the most fundamental facts before introducing complexity. If a reader stops early, they still walk away with the key message. I also arranged visualizations and takeaways in a **zig-zag pattern**, naturally leading the eye down the page while balancing the layout.
+
+#### Color choices
+
+I designed a custom color palette inspired by the **ocean and concrete**, with the latter being the dominant material in shoreline armoring. The primary palette consists of a gradient of **icy-blue grays**, with two **contrasting olive greens** to highlight key elements and create visual interest. 
+
+#### Contextualizing the data
+
+To help readers interpret the data, I used **annotations and aerial images** to provide real-world context. At the top of the infographic, I framed the issue with a compelling hook to grip the reader and keep them engaged till the end. 
+
+#### Centering the primary message
+
+To keep key takeaways clear, I relied on **color and annotations**:
+
+-   Main trends are highlighted in **lighter, high-contrast colors**, while background data is muted.
+
+-   When comparing multiple groups but emphasizing one, I used **olive green** to make the focal data stand out.
+
+-   Where applicable, I noted **exact values** only for the highlighted group, representing the rest through relative area to maintain visual clarity.
+
+#### Considering accessibility
+
+Ensuring my designs are accessible and inclusive is a priority for me. With this in mind, I made several design choices to enhance accessibility in my infographic:
+
+-   Color-blind-friendly palette with high-contrast blue, green, and white.
+
+-   Dark background to improve contrast and readability.
+
+-   Clean, sans-serif font for clarity on small fonts.
+
+-   Alt text for images to support all audiences.
+
+#### Applying a DEI lens
+
+Coastal armoring often prioritizes private property rights over public coastal access, raising equity concerns about the loss of recreational, cultural, and spiritual spaces. I emphasized these issues at the beginning and end of my infographic to frame the broader social and environmental justice implications. By showing who benefits and who bears the costs, I aimed to ensure that equity remained a central consideration.
+
+------------------------------------------------------------------------
+
+### My code.
+
+If you'd like to reference my code for your own data visualizations or infographic, unfold the code chunk below.
+
+```{r, results='hide'}
+#| message: false
+#| warning: false
+#| eval: false
+#| echo: true
+#| code-fold: true
+#| code-summary: "Show Code"
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                               load libraries                             ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+library(tidyverse)
+library(here)
+library(janitor)
+library(ggtext)
+library(sf)
+library(tigris)
+library(glue)
+library(stringr)
+library(waffle)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                          load & wrangle data                       ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#....................define coastal cities and counties.....................
+
+coastal_counties <- c("Del Norte", "Sonoma", "Humboldt", "Mendocino", "Marin",
+                      "San Francisco", "San Mateo", "Santa Cruz", "Monterey", 
+                      "San Luis Obispo", "Santa Barbara", "Ventura", "Los Angeles", 
+                      "Orange", "San Diego")
+
+#....................load coastal armoring data...................
+
+# load coastal armoring csv data
+coastal_structures <- read_csv(here("data", "structures_2024.csv")) |>
+  clean_names()
+
+# load coastal armoring shapefile data
+coastal_structures_sf <- read_sf(here("data","structures_2024_sf", 
+                                      "StructureLocations_2_15_24.shp"))
+
+# summarize coastal armoring structures per county 
+total_county_structures <- coastal_structures |>
+  group_by(county) |>
+  summarise(
+    total_structures = n(),
+    .groups = "drop" 
+  ) 
+
+#....................load coastal armoring timeseries data...................
+
+# load coastal armoring timeseries data 
+counties_timeseries<- read_csv(here("data", "armoring_timeseries.csv"))|>
+  filter(!coastline %in% c("Southern California", "California"))
+  
+california_timeseries<- read_csv(here("data", "armoring_timeseries.csv"))|>
+  filter(coastline =="California")
+
+#.................wrangle development type data .................
+
+# select and clean development data
+structure_development <- coastal_structures |> 
+  select(development_type) |> 
+  mutate(development_type = tolower(development_type)) |>
+  mutate(development_type = case_when(
+    development_type %in% c("public, local", "public, state", "public, federal", "private, commercial") ~ development_type,
+    development_type %in% c("privates, residential", "private, residential") 
+    ~ "private, residential", 
+    TRUE ~ NA_character_)) |> 
+  separate(development_type, into = c("ownership_type", "sub_category"), sep = ", ", extra = "merge", fill = "right")
+
+# count development types
+development_count <- structure_development |> 
+  drop_na() |> 
+  count(ownership_type, sub_category) |> 
+  arrange(n) |> 
+  mutate(sub_category = fct_reorder(sub_category, n))
+
+#.................wrangle structure type data .................
+
+# select structure type
+structure_type <- coastal_structures |> 
+  select(structure_type) |>
+  mutate(structure_type = case_when(
+    structure_type %in% c("Seawall", "Revetment", "Retaining Wall", 
+                          "Sand Wall", "Surface Armor", "Bulkhead",
+                          "Infill") ~ structure_type,
+    TRUE ~ "Other"))
+
+# count structure types
+structure_count <- structure_type |> 
+  drop_na() |> 
+  count(structure_type) |> 
+  arrange(n) |> 
+  mutate(structure_type = fct_reorder(structure_type, n)) |>
+  mutate(prct = (n/sum(n))*100)
+  
+#.................wrangle backshore type data .................
+
+# select and clean backshore type
+backshore_type <- coastal_structures |> 
+  select(backshore_type) |> 
+  mutate(backshore_type = case_when(
+    backshore_type %in% c("Beach", "Cliff/Bluff", "Inlet") ~ backshore_type,
+    backshore_type %in% c("Bluff") 
+    ~ "Cliff/Bluff", 
+    TRUE ~ "Other"))
+  
+# count backshore type
+backshore_count <- backshore_type |> 
+  drop_na() |> 
+  count(backshore_type) |> 
+  arrange(n) |> 
+  mutate(backshore_type = fct_reorder(backshore_type, n))
+
+#.......load state and county boundaries and merge with summary data.......
+
+# define california boundaries
+california_sf <- states(cb = TRUE, class = "sf") |>
+  filter(STUSPS == "CA")
+
+# filter for coastal counties only
+coastal_counties_sf <- counties(state = "CA", cb = TRUE, class = "sf")|> 
+  mutate(county = sub(" County", "", NAME)) |> 
+  filter(county %in% coastal_counties)
+
+# Merge with coastal county data
+county_structures_sf <- coastal_counties_sf |> 
+  right_join(total_county_structures, by = "county")
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                          Define Graphic Aesthetics                       ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# define colors 
+deep_olive <- "#1e1d18"
+dark_olive <- "#4e540f"
+medium_olive <- "#666d20"
+light_olive <- "#8b9147"
+deep_ice <- "#080d12"
+darker_ice <- "#1d2a3a"  
+dark_ice <- "#3b4a5f"
+medium_dark_ice <- "#5c81a9"
+medium_ice <- "#7992a6"
+light_ice <- "#C0D0CE"
+
+# define a custom theme function
+theme_dark_ice_olive <- function() {
+  theme_minimal() + 
+  
+  theme(
+    
+    # customize text
+    text = element_text(size = 10, color = "white"),
+    axis.text.x = element_text(size = 8, color = "white"), 
+    axis.text.y = element_text(size = 8, color = "white"), 
+    
+    # customize grid lines and background
+    panel.grid.major = element_blank(),  
+    panel.grid.minor = element_blank(),  
+    
+    # axis line and tick marks color customization
+    axis.line = element_line(color = "white", size = 0.25),  
+    axis.ticks = element_line(color = "white", size = 0.25),
+    
+    # customize plot title
+    plot.title = element_text(size = 12, face = "bold", 
+                              color = "white"),
+    
+    # customize plot and panel background
+    plot.background = element_rect(fill = deep_olive, color = deep_olive),
+    panel.background = element_rect(fill = deep_olive, color = deep_olive),  
+    
+  )
+}
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                        Ownership Type Waffle Chart                       ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Aggregate counts for public vs. private structures
+ownership_waffle <- development_count |> 
+  group_by(ownership_type) |> 
+  summarise(n = sum(n)) 
+
+# Define colors for public vs. private
+ownership_waffle_colors <- c("private" = light_olive, "public" = medium_ice)
+
+
+ownership_waffle_chart <- ggplot(ownership_waffle, 
+       aes(fill = ownership_type, values = n)) +
+  geom_waffle(color = "#1e1d18", #color of outline of waffle cubes,
+              size = 1.25,#thickness of outline of waffle cubes
+              n_rows = 10,
+              make_proportional = TRUE) +
+  coord_fixed() + #makes all waffle cubes square
+  scale_fill_manual(values = ownership_waffle_colors) +
+  theme_dark_ice_olive() +
+  theme(
+    plot.background = element_rect(fill = deep_olive, color = deep_olive),
+    panel.background = element_rect(fill = deep_olive, color = deep_olive),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.line.x = element_blank(),
+    axis.line.y = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid = element_blank()
+  )
+
+ownership_waffle_chart
+
+# Save the plot as a PDF file
+ggsave("ownership_waffle_chart.png", plot = ownership_waffle_chart, width = 5, height = 5, dpi=300)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                     Backshore Environment Waffle Chart                   ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Define colors for backshore types (choose distinct colors for each category)
+backshore_colors <- c(
+  "Beach" = medium_olive,     
+  "Cliff/Bluff" = dark_ice,  
+  "Inlet" = medium_ice,     
+  "Other" = light_ice
+)
+
+backshore_waffle_chart <- ggplot(backshore_count, 
+       aes(fill = backshore_type, values = n)) +
+  geom_waffle(color = "#1e1d18", #color of outline of waffle cubes,
+              size = 1.25,#thickness of outline of waffle cubes
+              n_rows = 10,
+              make_proportional = TRUE) +
+  coord_fixed() + #makes all waffle cubes square
+  scale_fill_manual(values = backshore_colors) +
+  theme_dark_ice_olive() +
+  theme(
+    plot.background = element_rect(fill = deep_olive, color = deep_olive),
+    panel.background = element_rect(fill = deep_olive, color = deep_olive),
+    legend.position = "bottom",
+    legend.title = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.line.x = element_blank(),
+    axis.line.y = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid = element_blank()
+  )
+
+backshore_waffle_chart
+
+# Save the plot as a PDF file
+ggsave("backshore_waffle_chart.png", plot = backshore_waffle_chart, width = 5, height = 5, dpi=300)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                          Structure Type Bar Chart                        ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# bar chart
+structure_bar_plot <- ggplot(structure_count, aes(x = structure_type, y = prct)) +
+  geom_col(fill = light_olive) +
+  geom_text(aes(
+      label = paste0(round(prct, 1), "%")),
+      color = "white",
+      size = 3,
+      vjust = 0.5,
+      hjust = -0.2) +
+  labs(title = "Hard Armoring Along California’s Coast", 
+       subtitle = str_wrap("Over 85% of armoring structures are seawalls, revetments, or retaining walls", width = 30),
+       x = NULL,
+       y = NULL
+       ) +
+  scale_y_continuous(expand = expansion(mult = c(0.01, 0.15)))+
+  scale_x_discrete(expand = expansion(mult = c(0.1, 0.0))) +
+  coord_flip() +
+  theme_dark_ice_olive() +
+  theme(
+    legend.position = "blank",
+    axis.ticks.x = element_blank(),
+    axis.text.x = element_blank(),
+    axis.line.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.y = element_text(size = 8),
+    axis.line.y = element_blank(),
+    plot.subtitle = ggtext::element_markdown(margin = margin(t = 5, b = 10)),
+    plot.title = element_text(margin = margin(t = 15, b = 0)),
+    plot.margin = margin(0, 30, 10, 10))
+
+# Save the plot as a PDF file
+ggsave("structure_bar_chart.pdf", plot = structure_bar_plot, width = 7.5, height = 5)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                            County Choropleth Map                         ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# cloropleth map 
+county_map <- ggplot() +
+  geom_sf(data = california_sf, fill = deep_olive, color = "white") +
+  geom_sf(data = county_structures_sf, aes(fill = total_structures), color = "white") +
+  scale_fill_gradientn(
+    name = "Number of Structures",
+    colors = rev(c(deep_ice, darker_ice, dark_ice, medium_dark_ice, medium_ice, light_ice)),
+    limits = c(0, 1050)) +
+  geom_point(data = coastal_structures, aes(x = longitude, y = latitude), color = "#d36135",
+             size = .25) +
+  labs(
+    title = "Shoreline Armoring Across Coastal Counties",
+    subtitle = str_wrap("Southern counties have significantly more structures than other coastal regions in the State", width = 50)
+  ) +
+  theme_dark_ice_olive() +
+  theme(
+    legend.position = c(.20, 0.1),
+    legend.title.position = "top",
+    legend.title = element_text(size = 8),
+    legend.direction = "horizontal",
+    axis.line = element_blank(),
+    axis.ticks = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.title = element_blank(),
+    panel.background = element_rect(fill = deep_olive, color = NA),
+    plot.background = element_rect(fill = deep_olive, color = NA),
+    plot.margin = margin(0, 50, 0, 25)
+  ) +
+  coord_sf(clip = "off")
+
+# Save the plot as a PDF file
+ggsave("county_heat_map.pdf", plot = county_map, width = 5, height = 6)
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##                              Time Series Plots                           ----
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# define a color mapping for coastlines
+coastline_colors <- c(
+  "Ventura" = medium_ice, 
+  "Los Angeles" = medium_ice,
+  "Orange" = medium_ice,
+  "San Diego" = medium_ice,
+  "Santa Barbara" = medium_ice
+)
+
+# define line widths based on coastline (for example, making California thicker)
+coastline_linewidths <- c(
+  "Ventura" = .75, 
+  "Los Angeles" = .75,
+  "Orange" = .75,
+  "San Diego" = .75,
+  "Santa Barbara" = .75
+)
+
+# assign default color to coastlines not listed
+counties_timeseries$coastline_color <- 
+  ifelse(counties_timeseries$coastline %in% names(coastline_colors),
+         coastline_colors[counties_timeseries$coastline],dark_ice)
+
+counties_timeseries$line_width <- 
+  ifelse(counties_timeseries$coastline %in% names(coastline_linewidths),
+         coastline_linewidths[counties_timeseries$coastline], .25)
+
+# create line plot with faceting for califoria and all other counties
+counties_timeseries_plot <- ggplot(counties_timeseries, aes(x = year, y = armored_shoreline_miles, group = coastline, color = coastline_color, size = line_width)) +
+  geom_line() + 
+  geom_point(size = 1) +
+  scale_color_identity() +
+  scale_size_identity() + 
+  scale_x_continuous(breaks = c(1971, 1998, 2018)) +
+  scale_y_continuous(breaks = c(0, 10, 20, 30), limits = c(0, 30)) +
+  labs(x = NULL, 
+       y = "Miles of Armored Shoreline") +
+  theme_dark_ice_olive()
+
+# Save the plot as a PDF file
+ggsave("counties_timeseries_plot.pdf", plot = counties_timeseries_plot, width = 6, height = 4)
+
+```
+
+------------------------------------------------------------------------
+
+### Citations.
+
+Adelman, K., & Adelman, G. (2002-2025). *California Coastal Records Project photographs*. Copyright © 2002-2025 by Kenneth & Gabrielle Adelman. Retrieved from [www.californiacoastline.org](http://www.californiacoastline.org)
+
+California Coastal Commission. (2024, March 1). *California Coastal Commission Armor Structure Locations dataset*. ArcGIS Hub. Retrieved March 13, 2025, from <https://california-coastal-commission-open-data-1-3-coastalcomm.hub.arcgis.com/>
+
+California Coastal Commission. (2018). Revised draft residential adaptation policy guidance: Interpretive guidelines for addressing sea level rise in local coastal programs and coastal development permits. Retrieved from <https://www.coastal.ca.gov/climate/slr/vulnerability-adaptation/residential/> 
+
+Griggs, G. and Patsch, K., 2019. The protection/hardening of California's coast: Times are changing. Journal of Coastal Research, 35(5), 1051–1061. Coconut Creek (Florida), ISSN 0749-0208.
+
+Lester, C.; Griggs, G.; Patsch, K., and Anderson, R., 2022. Shoreline retreat in California: Taking a step back. Journal of Coastal Research, 38(6), 1207–1230. Coconut Creek (Florida), ISSN 0749-0208. <https://doi.org/10.2112/JCOASTRES-D-22A-00010.1>
+
+Lester, C., Manley, C., Dinh, Y., Rozal, S., Cooper, A., Winters, L., Munster, K., Bok, T., Wrubel, N., 2023. Planning for Sea Level Rise on California’s Coast: Status, Trends, and Recommendations. Ocean and Coastal Policy Center, Marine Science Institute, University of California, Santa Barbara, California. <https://drive.google.com/file/d/1IJjDN8OHJqxzRUDRTxUgcd2iZpUYAklk/view> 
+
+Schooler, N. K., Dugan, J. E., Hubbard, D. M., & Straughan, D. (2017). Local scale processes drive long-term change in biodiversity of sandy beach ecosystems. Ecology and Evolution, 7(13), 4822–4834.<https://doi.org/10.1002/ece3.3064>
